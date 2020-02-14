@@ -2742,6 +2742,10 @@ Image.prototype = {
     },
 
     _createInsertPanel: function _createInsertPanel() {
+	if(typeof(this.editor.customConfig.pushImg) == 'function'){
+            this.editor.customConfig.pushImg();
+            return;
+        }    
         var editor = this.editor;
         var uploadImg = editor.uploadImg;
         var config = editor.config;
