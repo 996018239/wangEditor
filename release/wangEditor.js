@@ -1377,10 +1377,6 @@ Link.prototype = {
 
     // 创建 panel
     _createPanel: function _createPanel(text, link) {
-if(typeof(this.editor.customConfig.createLink) == 'function'){
-            this.editor.customConfig.createLink()
-            return;
-        }
         var _this = this;
 
         // panel 中需要用到的id
